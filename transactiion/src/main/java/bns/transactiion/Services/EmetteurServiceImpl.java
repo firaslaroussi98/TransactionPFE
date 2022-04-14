@@ -84,12 +84,12 @@ public class EmetteurServiceImpl implements IEmetteurService{
         try {
 
             emetteurrepo.deleteEmetteurByIdemetteur(IdEmetteur);
-            log.info("Finding Emetteur with ID = %s"+IdEmetteur);
+            log.info("Finding Emetteur with ID = {}", IdEmetteur);
             log.info("Emetteur Deleted Successfuly ");
             msg="Delete Done";
         }
         catch (Exception e){
-            log.error("The Emetteur with ID = %s does not Exist"+IdEmetteur);
+            log.error("The Emetteur with ID = {} does not Exist", IdEmetteur);
             msg="error";
         }
 
@@ -101,13 +101,13 @@ public class EmetteurServiceImpl implements IEmetteurService{
     public String deleteEmetteurByPv(String EmetteurPv) {
         String msg="";
         try {
-            log.info("Finding Emetteur with PV = %s"+EmetteurPv);
+            log.info("Finding Emetteur with PV = {}", EmetteurPv);
             emetteurrepo.deleteEmetteurByPv(EmetteurPv);
             log.info("Emetteur Deleted Successfuly ");
             msg="Delete Done";
         }
         catch (Exception e){
-            log.error("The Emetteur with PV = %s does not Exist"+EmetteurPv);
+            log.error("The Emetteur with PV = {} does not Exist", EmetteurPv);
             msg="error";
         }
 
